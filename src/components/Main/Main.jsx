@@ -54,7 +54,7 @@ const Main = () => {
                     </div>
                     <div className="cardInfo">
                       <h3 className="destTitle">{destname}</h3>
-                      <hr />
+    
                       <span className="continent flex">
                         <HiOutlineLocationMarker className='icon'/>
                         <span className='name'><h4>{location}</h4></span>
@@ -67,7 +67,7 @@ const Main = () => {
                           <h5>{price}</h5>
                         </div>
                       </div>
-                      <hr />
+            
                       <div className="desc">
                         <p>{description}</p>
                       </div>

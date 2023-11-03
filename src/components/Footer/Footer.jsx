@@ -39,7 +39,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="footerParagraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, consequuntur impedit. Eaque voluptates doloremque fugit dolorem dolore provident amet non nesciunt voluptas? Beatae officiis delectus excepturi aspernatur eaque, inventore eius.
+            Explore the world with Travel. Your gateway to unforgettable journeys and remarkable destinations. Whether you're a seasoned traveler or planning your first adventure, we're here to make your travel dreams come true. Discover the best travel deals, get expert travel tips, and stay connected with us. Let's embark on a journey of a lifetime together
             </div>
             <div className="footerSocials">
               <AiOutlineTwitter className='icon'/>

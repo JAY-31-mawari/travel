@@ -27,6 +27,7 @@ const Home = () => {
       console.log(data);
     })
     document.getElementById("destname").value="";
+    document.getElementById("destdate").value="";
   }
 
   useEffect(()=>{
@@ -62,7 +63,7 @@ const Home = () => {
               <label htmlFor="date">Search Your Date:
               </label>
               <div className="input flex">
-                  <input type="date"/>
+                  <input  id="destdate" type="date"/>
                   <GrLocation className="icon"/>
               </div>
             </div>
