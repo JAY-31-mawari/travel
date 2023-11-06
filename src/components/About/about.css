@@ -1,0 +1,72 @@
+.aboutsection{
+    position:relative;
+    width:100%;
+    height:100%;
+    top:10px;
+    z-index:6;
+    margin:auto;
+}
+.aboutcontent{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding: 7rem 1.5rem 3rem;
+    row-gap: 3rem;
+    margin: auto;
+    color: var(--PrimaryColor);
+    z-index: 100;
+}
+.historysection{
+    position:relative;
+    width:100%;
+    height:100%;
+    top:10px;
+    z-index:6;
+    margin:auto;
+}
+.historycontent{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding: 7rem 1.5rem 3rem;
+    row-gap: 3rem;
+    margin: auto;
+    color: var(--PrimaryColor);
+    z-index: 100;
+}
+.contactsection{
+    position:relative;
+    width:100%;
+    height:100%;
+    top:10px;
+    z-index:6;
+    margin:auto;
+}
+.contactcontent{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding: 7rem 1.5rem 3rem;
+    row-gap: 3rem;
+    margin: auto;
+    color: var(--PrimaryColor);
+    z-index: 100;
+}
+.login{
+    position:relative;
+    width:100%;
+    height:100%;
+    top:10px;
+    z-index:6;
+    margin:auto;
+}
+.logincontent{
+    position: relative;
+    width: 100%;
+    height: max-content;
+    padding: 7rem 1.5rem 3rem;
+    row-gap: 3rem;
+    margin: auto;
+    color: var(--PrimaryColor);
+    z-index: 100;
+}

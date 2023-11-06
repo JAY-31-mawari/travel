@@ -103,13 +103,18 @@
     border-radius: 3rem;
 }
 
+#destname::placeholder{
+    color:black;
+}
+
 .input input {
     background: none;
     border: none;
+    color:var(--textColor);
     outline: none;
     width: 100%;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .input[type=range] {

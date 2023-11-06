@@ -24,22 +24,19 @@ const Navbar = () => {
             <div className={active}>
                 <ul className="navLists flex">
                     <li className="navItem">
-                        <a href="#" className="navLink">Home</a>
+                        <a href="/" className="navLink">Home</a>
                     </li>
                     <li className="navItem">
-                        <a href="#" className="navLink">Packages</a>
+                        <a href="/about" className="navLink">About</a>
                     </li>
                     <li className="navItem">
-                        <a href="#" className="navLink">Shop</a>
+                        <a href="/history" className="navLink">History</a>
                     </li>
                     <li className="navItem">
-                        <a href="#" className="navLink">About</a>
+                        <a href="/contact" className="navLink">Contact</a>
                     </li>
-                    <li className="navItem">
-                        <a href="#" className="navLink">Pages</a>
-                    </li>
-                    <button className="btn">
-                        <a href="#">Book Now</a>
+                    <button className="btn" type="button">
+                        <a href="/login">Login</a>
                     </button>
                     <div onClick={removenav} className="closeNavbar">
                         <AiFillCloseCircle className='icon'/>

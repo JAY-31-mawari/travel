@@ -1,19 +1,24 @@
-import React,{useState,useEffect} from 'react'
-import Navbar from './components/Navbar/Navbar'
-import Main from './components/Main/Main'
-import Home from './components/Home/Home'
-import Footer from './components/Footer/Footer'
-import './app.css'
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import AboutPage from './AboutPage';
+import HistoryPage from './HistoryPage';
+import ContactPage from './ContactPage';
+import LoginPage from './LoginPage';
 
-
-const App = () =>{
-    return (
-        <>
-        <Navbar />
-        <Home />
-        <Main />
-        <Footer />
-        </>
-    )   
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<HomePage />}/>
+        <Route path="/about" element={<AboutPage />}/>
+        <Route path="/history" element={<HistoryPage />}/>
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/login" element={<LoginPage />}/>
+      </Routes>
+    </Router>
+  );
 }
-export default App
+
+export default App;

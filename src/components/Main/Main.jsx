@@ -72,7 +72,7 @@ const Main = () => {
                         <p>{description}</p>
                       </div>
                       <button className='btn flex'>
-                        DETAILS <HiOutlineClipboardCheck className='icon'/>
+                        BOOK NOW <HiOutlineClipboardCheck className='icon'/>
                       </button>
                     </div>
                 </div>
