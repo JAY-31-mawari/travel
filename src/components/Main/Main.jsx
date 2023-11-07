@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import './main.css'
-
+import  { Link } from 'react-router-dom'
 import kedarnath from '../../assets/kedarnath.jpg'
 import almora from '../../assets/uttharkhand1.jpg'
 import kerala from '../../assets/kerala.jpg'
@@ -71,8 +71,8 @@ const Main = () => {
                       <div className="desc">
                         <p>{description}</p>
                       </div>
-                      <button className='btn flex'>
-                        BOOK NOW <HiOutlineClipboardCheck className='icon'/>
+                      <button className='btn flex'><Link to="/payment">
+                        BOOK NOW </Link><HiOutlineClipboardCheck className='icon'/>
                       </button>
                     </div>
                 </div>

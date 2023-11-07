@@ -6,6 +6,7 @@ import AboutPage from './AboutPage';
 import HistoryPage from './HistoryPage';
 import ContactPage from './ContactPage';
 import LoginPage from './LoginPage';
+import PaymentPage from './PaymentPage'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/history" element={<HistoryPage />}/>
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<LoginPage />}/>
+        <Route path="/payment" element={<PaymentPage />} />
       </Routes>
     </Router>
   );
