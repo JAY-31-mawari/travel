@@ -3,6 +3,7 @@ import './navbar.css'
 import { MdOutlineTravelExplore } from 'react-icons/md'
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { TbGridDots } from 'react-icons/tb';
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     const [active,setactive]=useState('navBar');
@@ -24,19 +25,19 @@ const Navbar = () => {
             <div className={active}>
                 <ul className="navLists flex">
                     <li className="navItem">
-                        <a href="/" className="navLink">Home</a>
+                        <Link to="/" className="navLink">Home</Link>
                     </li>
                     <li className="navItem">
-                        <a href="/about" className="navLink">About</a>
+                        <Link to="/about" className="navLink">About</Link>
                     </li>
                     <li className="navItem">
-                        <a href="/history" className="navLink">History</a>
+                        <Link to="/history" className="navLink">History</Link>
                     </li>
                     <li className="navItem">
-                        <a href="/contact" className="navLink">Contact</a>
+                        <Link to="/contact" className="navLink">Contact</Link>
                     </li>
                     <button className="btn" type="button">
-                        <a href="/login">Login</a>
+                        <Link to="/login">Login</Link>
                     </button>
                     <div onClick={removenav} className="closeNavbar">
                         <AiFillCloseCircle className='icon'/>
