@@ -1,11 +1,13 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import './navbar.css'
 import { MdOutlineTravelExplore } from 'react-icons/md'
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { TbGridDots } from 'react-icons/tb';
 import { Link } from 'react-router-dom'
+import TravelContext from '../../state/TravelContext';
 
 const Navbar = () => {
+    const{data}=useContext(TravelContext);
     const [active,setactive]=useState('navBar');
     const shownav=()=>{
         setactive('navBar activenavBar');
@@ -39,6 +41,7 @@ const Navbar = () => {
                     <button className="btn" type="button">
                         <Link to="/login">Login</Link>
                     </button>
+                    <h4>{data.name.toUpperCase()}</h4>
                     <div onClick={removenav} className="closeNavbar">
                         <AiFillCloseCircle className='icon'/>
                     </div>

@@ -1,5 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import TravelProvider from './state/TravelProvider'
 import App from './App'
 
-ReactDOM.render(<App />,document.querySelector("#root"))
+ReactDOM.render(<TravelProvider>
+    <App />
+</TravelProvider> ,document.querySelector("#root"))

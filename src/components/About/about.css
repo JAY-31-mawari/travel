@@ -52,7 +52,7 @@
     color: var(--PrimaryColor);
     z-index: 100;
 }
-.login{
+.loginsection{
     position:relative;
     width:100%;
     height:100%;
@@ -67,6 +67,18 @@
     padding: 7rem 1.5rem 3rem;
     row-gap: 3rem;
     margin: auto;
-    color: var(--PrimaryColor);
     z-index: 100;
 }
+
+.logincontainer{
+    width:60%;
+    border:2px solid black;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+}
+
+

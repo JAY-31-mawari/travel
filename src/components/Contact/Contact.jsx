@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section className='contactsection'>
       <div className='contactcontent container'>
-        <h1>This Page is Undern Development.Contact Page</h1>
+        <h1>This Page is Under Development.Contact Page</h1>
       </div>
     </section>
   )

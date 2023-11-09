@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import './main.css'
 import  { Link } from 'react-router-dom'
 import kedarnath from '../../assets/kedarnath.jpg'
@@ -21,11 +21,13 @@ import uk from '../../assets/uk.jpg'
 
 import {HiOutlineLocationMarker} from 'react-icons/hi'
 import {HiOutlineClipboardCheck} from 'react-icons/hi'
+import TravelContext from '../../state/TravelContext'
 
 const imgarr=[kedarnath,badrinath,almora,kerala,kumaon,nainital,rishikesh,uk,himalaya,dharamsala,ny,paris,norway,santorini,singapore,dubai,maldives]
 const Main = () => {
 
   const [Data,setData]=useState([]);
+  const {data,updatedata}=useContext(TravelContext);
 
   useEffect(()=>{
     fetch("https://travelapi-qhzt.onrender.com/api/products/travelsdatabase",)
@@ -36,6 +38,17 @@ const Main = () => {
       setData(data);
     })
   },[])
+
+  const handlebooknow = (data) => {
+    updatedata({
+      id:data.id,
+      destname:data.destname,
+      location:data.location,
+      price:data.price,
+      desttype:data.desttype,
+      desc:data.description,
+    })
+  }
   
   return (
     <section className="main container section">
@@ -71,7 +84,7 @@ const Main = () => {
                       <div className="desc">
                         <p>{description}</p>
                       </div>
-                      <button className='btn flex'><Link to="/payment">
+                      <button className='btn flex' onClick={()=>handlebooknow({id,destname,location,desttype,price,description})}><Link to="/payment">
                         BOOK NOW </Link><HiOutlineClipboardCheck className='icon'/>
                       </button>
                     </div>
