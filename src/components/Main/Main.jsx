@@ -30,7 +30,7 @@ const Main = () => {
   const {data,updatedata}=useContext(TravelContext);
 
   useEffect(()=>{
-    fetch("https://travelapi-qhzt.onrender.com/api/products/travelsdatabase",)
+    fetch("http://localhost:4000/api/products/travelsdatabase",)
     .then((response)=>{
       return response.json();
     }).then((data)=>{

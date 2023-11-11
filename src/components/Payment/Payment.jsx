@@ -26,6 +26,25 @@ const Payment = () => {
 
     const {data}=useContext(TravelContext);
 
+    const handlepayment = () => {
+        if(data.name==="GUEST")
+        {
+            alert("PLEASE ! FIRST LOGGED IN")
+        }
+        else{
+            fetch("http://localhost:4000/api/products/payment",{
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                },
+                body:JSON.stringify(data),
+            }).then((response)=>{
+                return response.json();
+            }).then((data)=>{
+                alert(data.message);
+            })
+        }
+    }
   return (
     <div className="paymentsection">
         <div className="paymentcontent container">
@@ -48,7 +67,7 @@ const Payment = () => {
                     <label for="passcode">Passcode</label>
                     <input type="password" id="passcode" placeholder="Passcode" />
                 </div>
-                <button class="payment-button">Make Payment</button>
+                <button class="payment-button" onClick={handlepayment}>Make Payment</button>
             </div>
 
             <div class="extra-container">

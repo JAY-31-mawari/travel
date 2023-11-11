@@ -3,7 +3,7 @@ import TravelContext from './TravelContext'
 
 const TravelProvider = (props) => {
 
-    const [data,setdata]=useState({name:"guest",id:0,destname:"",location:"",price:"",desttype:"",desc:""});
+    const [data,setdata]=useState({name:"GUEST",id:0,destname:"",location:"",price:"",desttype:"",desc:""});
 
     const updatedata=(newdata)=>{
         setdata({...data,...newdata})

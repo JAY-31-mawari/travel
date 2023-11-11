@@ -39,9 +39,8 @@ const Navbar = () => {
                         <Link to="/contact" className="navLink">Contact</Link>
                     </li>
                     <button className="btn" type="button">
-                        <Link to="/login">Login</Link>
+                        <Link to="/login">{data.name==="GUEST" ? "Login":data.name}</Link>
                     </button>
-                    <h4>{data.name.toUpperCase()}</h4>
                     <div onClick={removenav} className="closeNavbar">
                         <AiFillCloseCircle className='icon'/>
                     </div>

@@ -11,21 +11,6 @@ import 'aos/dist/aos.css'
 const Home = () => {
   
   function senddatatoserver(){
-    const destinationname=document.getElementById("destname")
-    const newdata={
-      destname:destinationname.value
-    }
-    fetch("https://travelapi-qhzt.onrender.com/api/products/demo",{
-      method:'POST',
-      headers:{
-        'Content-Type':'application/json'
-      },
-      body:JSON.stringify(newdata),
-    })
-    .then(response=>response.json())
-    .then(data=>{
-      console.log(data);
-    })
     document.getElementById("destname").value="";
     document.getElementById("destdate").value="";
   }

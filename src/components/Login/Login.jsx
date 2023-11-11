@@ -1,35 +1,60 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import '../About/about.css'
 import TravelContext from '../../state/TravelContext'
+import { Link } from 'react-router-dom' 
 
 const Login = () => {
   
 const [islogin,setislogin]=useState(true)
-
+const {data,updatedata}=useContext(TravelContext);
 const handlechange = () =>{
   setislogin(!islogin);
+}
+
+const handledata = () => {
+  let loginname=document.getElementById("username").value.toUpperCase();
+  const newdata={
+    username:loginname,
+    islogin:islogin,
+  }
+    fetch("http://localhost:4000/api/products/login",{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json',
+      },
+      body:JSON.stringify(newdata),
+    }).then((response)=>{
+      return response.json();
+    }).then((data)=>{
+      if(data.message === "SUCCESSFULLY LOGGED IN" || data.message === "ACCOUNT CREATED SUCCESSFULLY")
+      {
+        alert(data.message);
+        updatedata({
+          name:loginname,
+        })
+      }
+      else if(data.message === "INVALID USERNAME. FIRST SIGN UP PLEASE")
+      {
+        alert(data.message);
+      }
+      else
+      {
+        alert("TRY ONCE AGAIN")
+      }
+    })
 }
 
   return (
     <section className='loginsection'>
       <div className='logincontent container'>
       <div className="logincontainer">
-        <div className='login'><h2>{islogin?"Login":"Sign Up"}</h2></div>
-      <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Username</label>
-    <input type="text" class="form-control" id="exampleInputPassword1" required />
-  </div>
-  {islogin ? <div></div>:<div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
-  </div>}
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" required />
-    <div id="emailHelp" class="form-text">We'll never share your password with anyone else.</div>
-  </div>
-  <button type="button" class="btn btn-primary">{islogin ? "Login":"Sign Up"}</button>
-  <a href="#" onClick={handlechange}>Don't Have an Account ? Sign Up</a>
+        <h1>{islogin ? "Login":"Sign Up"}</h1>
+        <input type="text" className='logininput' id="username" placeholder='Enter Username'required/>
+        {islogin ? <div></div>:<input type="email" className='logininput' id="email" placeholder='abcd@example.com' required/>}
+        <input type="password" className='logininput' id="password" placeholder='Enter Password' required/>
+  
+  <button type="submit" class="btn btn-primary" onClick={handledata}>{islogin ? "Login":"Sign Up"}</button>
+  <div className='signup' onClick={handlechange}>Don't Have an Account? Sign Up</div>
       </div>
       </div>
     </section>

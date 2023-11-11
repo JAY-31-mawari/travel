@@ -71,7 +71,7 @@
 }
 
 .logincontainer{
-    width:60%;
+    width:90%;
     border:2px solid black;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -81,4 +81,127 @@
     padding: 20px;
 }
 
+.logincontainer input{
+    color:black;
+    margin:14px;
+}
+.logincontainer input::placeholder{
+    color:black;
+}
+.logincontainer input:focus{
+    outline:none;
+    box-shadow: 0 0 5px #007bff;
+}
+.signup:hover{
+    color:blue;
+    cursor:pointer;
+}
+.historybox{
+    width:100%;
+    margin:10px;
+    row-gap: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: center;
+    background: var(--cardBG);
+    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.54);
+    
+}
+.historycontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+    border-radius: 1rem;
+    background:white;
+    padding:10px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-left:10px;
+}
+
+.historycontainer1{
+    width:100%;
+    height:260px;
+}
+.historycontainer1 img{
+    padding:1rem;
+}
+
+
+.historycontainer2{
+    width:100%;
+    height:280px;
+}
+.historycontainer2 p{
+    padding:1rem;
+}
+
+.historycontainer3{
+    width:100%;
+    height:200px;
+    padding:30px;
+}
+@media screen and (max-width:1000px) {
+    .historybox{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .historycontainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:780px){
+    .historybox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .historycontainer3{
+        margin-top:9rem;
+        height:100px;
+    }
+}
+@media screen and (max-width:700px){
+    .historycontainer3{
+        margin-top:5rem;
+        height:100px;
+    }
+}
+@media screen and (max-width:650px){
+    .historycontainer3{
+        margin-top:3rem;
+        height:100px;
+    }
+}
+@media screen and (max-width:550px){
+    .historycontainer3{
+        margin-top:1.5rem;
+        height:100px;
+    }
+}
+
+
+@media screen and (max-width:470px){
+    .historycontainer3{
+        margin-top:2px;
+        height:100px;
+    }
+}
+@media screen and (max-width:470px){
+    .historycontainer3{
+        margin-top:0px;
+        height:100px;
+    }
+    .historycontainer2{
+        height:350px;
+    }
+}
+@media screen and (max-width:350px){
+    .historycontainer2{
+        height:400px;
+    }
+}
 

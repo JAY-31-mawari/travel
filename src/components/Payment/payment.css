@@ -48,6 +48,12 @@ body {
     margin: 20px;
     padding: 20px;
 }
+.paymentcontainer input{
+    color:black;
+}
+.paymentcontainer input::placeholder{
+    color:blue;
+}
 .extra-container{
     height: 50%;
 }
