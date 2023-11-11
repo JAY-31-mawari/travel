@@ -57,8 +57,8 @@ const History = () => {
                         <img src={imgarr[id-1]} alt={destname} />
                       </div>
                       <div className='historycontainer3'>
-                      <h4>{location}</h4>
-                      <span>{desttype}</span>
+                      <h4>{destname}</h4>
+                      <span>{location}</span>
                       <h5>{price}</h5>
                     </div>
                     <div className='historycontainer2'>
