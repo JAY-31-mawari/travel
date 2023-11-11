@@ -29,7 +29,7 @@ const History = () => {
     username:username,
   }
   useEffect(()=>{
-    fetch('http://localhost:4000/api/products/historydata',{
+    fetch('https://travelapi-qhzt.onrender.com/api/products/historydata',{
       method:'POST',
       headers:{
         'Content-type':'application/json',
