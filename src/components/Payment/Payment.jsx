@@ -32,7 +32,7 @@ const Payment = () => {
             alert("PLEASE ! FIRST LOGGED IN")
         }
         else{
-            fetch("http://localhost:4000/api/products/payment",{
+            fetch("https://travelapi-qhzt.onrender.com/api/products/payment",{
                 method:'POST',
                 headers:{
                     'Content-Type':'application/json',
