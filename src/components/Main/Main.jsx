@@ -29,7 +29,7 @@ const Main = () => {
   const [Data,setData]=useState([]);
   const {data,updatedata}=useContext(TravelContext);
 
-  useEffect(()=>{
+ /* useEffect(()=>{
     fetch("https://travelapi-qhzt.onrender.com/api/products/travelsdatabase",)
     .then((response)=>{
       return response.json();
@@ -37,6 +37,19 @@ const Main = () => {
       console.log(data)
       setData(data);
     })
+  },[])*/
+
+  useEffect(()=>{
+    async function fetchdata(){
+      const fetcheddata=await fetch("https://travelapi-qhzt.onrender.com/api/products/travelsdatabase",)
+      .then((response)=>{
+        return response.json();
+      }).then((data)=>{
+        return data;
+      })
+      setData(fetcheddata)
+    }
+    fetchdata()
   },[])
 
   const handlebooknow = (data) => {
